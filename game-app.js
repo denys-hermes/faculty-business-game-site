@@ -153,9 +153,7 @@ function Welcome({ onStart }) {
           <div className="rounds-preview">
             <div className="round-pill"><span className="n">1</span>Знай свого</div>
             <div className="round-pill"><span className="n">2</span>Цифри</div>
-            <div className="round-pill"><span className="n">3</span>Квіз</div>
-            <div className="round-pill"><span className="n">4</span>Україна</div>
-            <div className="round-pill"><span className="n">★</span>Фінал</div>
+            <div className="round-pill"><span className="n">3</span>Фінал</div>
           </div>
         </div>
       </div>
