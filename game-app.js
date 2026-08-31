@@ -7,7 +7,7 @@ const TEAM_COLORS = [
   '#7B3F8C', '#3E7BB6', '#C2453A', '#2C3E73',
   '#B07A4F', '#5A6B8C'
 ];
-const MIN_TEAMS = 30;
+const MIN_TEAMS = 5;
 const MAX_TEAMS = 35;
 
 // === MAIN APP ===
@@ -165,7 +165,7 @@ function Welcome({ onStart }) {
 
 // === SETUP ===
 function Setup({ onBack, onStart }) {
-  const [teamCount, setTeamCount] = useState(MAX_TEAMS);
+  const [teamCount, setTeamCount] = useState(MIN_TEAMS);
   const [teamNames, setTeamNames] = useState(Array.from({length: MAX_TEAMS}, () => ''));
   const [timePerQ, setTimePerQ] = useState(30);
   const [autoNext, setAutoNext] = useState(false);
@@ -191,7 +191,7 @@ function Setup({ onBack, onStart }) {
           <div>
             <div className="setup-card">
               <h3>Кількість команд</h3>
-              <p className="hint">Оберіть від 30 до 35 команд для факультетської гри.</p>
+              <p className="hint">Починаємо з 5 команд; за потреби додайте до 35.</p>
               <div className="team-count-control">
                 <button className="count-btn" disabled={teamCount<=MIN_TEAMS} onClick={()=>setTeamCount(teamCount-1)}>−</button>
                 <div className="count-display">{teamCount}<small>команд</small></div>
